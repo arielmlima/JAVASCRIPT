@@ -1,0 +1,47 @@
+
+        //Vamos falar de Condições, mas antes de falar disso precisamos entender as Sequencias:
+
+        //Sequências: códigos sequenciais. Segue a sequencia em ordem, oque vem primeiro é executado primeiro:
+
+        //var n = 3           ↓
+        //var n += 2          ↓
+        //window.alert(n)     ↓
+        //saida: 5
+
+        //E se tiver horas que eu quiser executar o comando 2 e horas que não? Ai vamos para as condições!
+
+        //Condições: Não sigo mais uma linha vertical, agora tenho desvios, que vem de desvio condicional.
+
+        //    ____ ⧫ ____
+        //   ↓           ↓
+        //  bloco      bloco
+        //   if         else
+        //   ----->o<-----
+        //         ↓
+
+        if (condição) {
+        //true
+        } else {
+        //false
+        }
+
+        //Exemplo 2: Condição simples
+
+        //Nessa se a condição for verdadeira acontece o evento, se for falsa o programa continua rolando sem problemas, não acontece nada, tudo continua como antes.
+
+        if(condição){
+        //true
+        }
+
+        //Gráfico de uma condição
+        //O Losangulo no JS vamos entender como if
+        //temos duas possibilidade, possibilidade da direita e a da esquerda na tela
+        //os blocos são as condições.
+        //else significa senão
+        //a estrutura tem dois blocos um para quando o if der positivo e caso não(else) ele vai pelo lado direito, pelo caminho do else.
+
+        
+        
+        
+
+  

@@ -1,0 +1,72 @@
+AULA 2 JAVASCRIPT
+
+HISTORIA DA INTERNET: GUERRA FRIA : ARPANET
+HISTORIA DA WORLD WIDE WEB (WWW),NAVEGADOR, HTTP, HTML.
+NETSCAPE NAVEGADOR NOVO QUE SURGIU DEPOIS DA MOSAIC. (A microsoft pegou o mosaic e transformou em internet explorer.)
+HISTORIA DO JAVASCRIPT: 1995 DENTRO DAS IMPLEMENTACOES DA NETSACPE POIS ERA MUITO ESTATICO,ERA PENSADA UMA NOVA LINGUAGEM DE PROGRAMAÇÃO, PRIMEIRO FOI PENSADO O NOME MOCA, DEPOIS LIVESCRIPT E FICOU JAVASCRIPT.
+
+JAVA E JAVASCRIPT NÃO TEM NADA A VER.
+As duas linguagem são baseadas na linguagem C.
+
+A microsoft vendo a sacada que o JavaScript era, decidiu copiar e fazer o Jscript, implementando algumas melhoras.
+Mas não passava de um plagio do projeto.
+
+Porem a NETSCAPE foi mais rapido e conseguiu a padronização da linguagem, uma empresa europeia chamada ECMA, associação europeia de fabricante de computadores.
+
+E com isso, o Javascript cedendo o código para a ecma, surgiu a linguagem ECMASCRIPT.
+
+Basicamente o ecmascript é o javascript padronizado.
+
+Estudar ECMA significa que voce vai estudar a versao padronizada do JS.
+
+2002 - Encerrou a treta da NetScape e Microsoft 
+
+2008 - Surge o GoogleChrome, com um motor interno (V8) muito poderoso que roda Javascript.
+
+Cada navegador tem seu proprio motor: Firefox: SpiderMonkey | Safari : Nitro | Opera : Cacan | Edge: Crackra
+
+ 
+A vantagem do V8 é que é codigo aberto, ele so roda no GoogleChrome, 
+como ele é aberto um grupo de pessoas modificaram ele para rodar fora do Chrome, 
+e assim surgiu o: 
+
+NODEJS: é uma maquina que roda javascript fora do navegador.
+ Popularizando a saida do javascript dos navegadores e hoje temos javascript do lado dos servidores tambem, mas esse não é o foco do curso.
+
+
+ECMASCRIPT: Versões
+
+1.0 1997
+
+2.0 1998
+
+3.0 1999 
+
+ES5 2009 
+
+ES6 2015
+
+ES2016
+ES2017
+ES2018
+ 
+
+TECNOLOGIAS QUE AGREGAM E USAM JAVASCRIPT:
+
+JQUERY: CONJUNTO DE BIBLIOTECAS QUE FACILITAVA O USO DE INTERATIVIDADE EM JS (DA MOZILLA).
+ANGULAR: FACILITA CRIAÇÃO DE APLICAÇÃO WEBS
+REACT: BIBLIOTECA DO FACEBOOK, MESMA FUNCIONALIDADE DO ANGULAR BEM DIZER.
+VUE: FRAMEWORK PODEROSO, TEM COMO BASE O ANGULAR TAMBEM, MAS BEM MELHOR FEITO POR UM DOIDO DA GOOGLE.
+ELECTRON: PARA PROGRAMAS DE INTERFACE GRAFICA, O PROPRIO VSCODE EH FEITO NELA, CHAT DISCORD.
+IONIC: SDK PARA CRIAR APLICACOES PARA DISPOSITIVOS MOVEIS
+CORDOVA: EVOLUÇÃO DA TECNOLOGIA FONEGARP
+
+NÃO APRENDA ESSAS TECNOLOGIAS SEM APRENDER JS.
+
+PARA JOGOS TEM VARIAS BIBLIOTECAS TBM:
+
+PHASER
+PIXIJS
+IMPACT
+MELON.JS
+CRATFYJS

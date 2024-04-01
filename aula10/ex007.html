@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--Tiramos os eventos configurados aqui e configuramos pelo proprio javascript, na parte do script.-->
+   <div id="area">
+    Interaja...
+   </div>
+
+<script>
+
+//Configurando eventos pelo Javascript: se chama listeners (ouvidores) que estão prestando atenção dentro do proprio javascript:
+
+var a = window.document.getElementById('area') 
+
+//Aqui é onde configuramos, e tiramos do HTML, deixamos o código mais limpo.
+a.addEventListener('click', clicar)
+a.addEventListener('mouseenter', entrar)
+a.addEventListener('mouseout', sair)
+
+    function clicar() {
+        a.innerText = 'Clicou!'
+        a.style.background = 'red'
+    }
+
+    function entrar() {
+        a.innerText = 'Entrou!'
+    }
+
+    function sair() {
+        a.innerText = 'Saiu!'
+        a.style.background = 'green'
+    }
+  //Curiosidade: Como eu sei que tem erro se aqui não aponta? Vamos para o devtools, no f12 e la ele vai apontar no Console a linha. Geralmente a linha vai ta dessa linha para cima. Por um W maiusculo no window o código não funciona.
+</script>
+</body>
+</html>

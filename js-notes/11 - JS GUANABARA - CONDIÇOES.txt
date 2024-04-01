@@ -1,0 +1,156 @@
+
+        //Vamos falar de Condições, mas antes de falar disso precisamos entender as Sequencias:
+
+        //Sequências: códigos sequenciais. Segue a sequencia em ordem, oque vem primeiro é executado primeiro:
+
+        //var n = 3           ↓
+        //var n += 2          ↓
+        //window.alert(n)     ↓
+        //saida: 5
+
+        //E se tiver horas que eu quiser executar o comando 2 e horas que não? Ai vamos para as condições!
+
+        //Condições: Não sigo mais uma linha vertical, agora tenho desvios, que vem de desvio condicional.
+
+        //    ____ ⧫ ____
+        //   ↓           ↓
+        //  bloco      bloco
+        //   if         else
+        //   ----->o<-----
+        //         ↓
+
+        if (condição) {
+        //true
+        } else {
+        //false
+        }
+
+        //Exemplo 2: Condição simples
+
+        //Nessa se a condição for verdadeira acontece o evento, se for falsa o programa continua rolando sem problemas, não acontece nada, tudo continua como antes.
+
+        if(condição){
+        //true
+        }
+
+        //Gráfico de uma condição
+        //O Losangulo no JS vamos entender como if
+        //temos duas possibilidade, possibilidade da direita e a da esquerda na tela
+        //os blocos são as condições.
+        //else significa senão
+        //a estrutura tem dois blocos um para quando o if der positivo e caso não(else) ele vai pelo lado direito, pelo caminho do else.
+
+        
+        
+        
+
+  
+
+
+
+//Aqui bem dizer é o nodejs que instalamos, nesse arquivo e não funciona o document.write. Vamos de console.log
+//console.log('O console funcionou corretamente!')
+
+//var vel = 60.5
+//console.log(`A velocidade do carro é ${vel}Km/h`)
+
+//console.log(`Você ultrapassou a velocidade permitida. MULTADO!`)
+
+//console.log(`Dirija sempre usando cinto de segurança!`)
+
+//Note que esses comandos são uma sequencia, não da para executar o ultimo sem executar o segundo, temos que fazer uma condição.
+
+var vel = 59
+
+console.log(`A velocidade do carro é ${vel}Km/h`)
+
+if (vel > 60) { 
+    console.log(`Você ultrapassou a velocidade permitida. MULTADO!`)
+}
+
+console.log(`Dirija sempre usando cinto de segurança!`)
+
+//Note que foi uma Condição simples, não tem senão. Se você passa acima da velocidade no radar ganha uma multa mas se você passa abaixo você não ganha um parabêns, não acontece nada vida que segue.
+
+
+var pais = 'EUA'
+console.log(`Vivendo em ${pais}`)
+if (pais != 'Brasil') {
+    console.log('Você é Brasileiro!')
+}else{
+        console.log('Você é Estrangeiro')
+}
+
+
+Vscode:
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type='number' name='txtvel' id='txtvel'> 
+    Km/h <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+       function calcular() { 
+        var txtv = window.document.querySelector ('input#txtvel')
+
+        var res = window.document.querySelector('div#res')
+
+        var vel = Number(txtv.value)
+
+        res.innerHTML = `<p>Sua velocidade atual é de ${vel} Km/h`
+        
+        if (vel > 60) {
+            res.innerHTML += `<strong>MULTADO</strong> por excesso de velocidade!`
+        }
+        res.innerHTML += `<p>Dirija sempre com cinto de segurança! </p>`
+       }
+    </script> 
+</body>
+</html>
+
+
+<!-- Fazer o mesmo com o exercicio 10 dos paises. -->
+
+Vscode:
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRINGO DETECTOR</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+   Qual país você nasceu? <input type='text' name='nacionalidade' id='nacionalidade'> 
+     <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+       function verificar() { 
+        var verif = window.document.querySelector ('input#verificar')
+
+        var res = window.document.querySelector('div#res')
+
+        var nac = (nacionalidade.value)
+
+        res.innerHTML = `<p>Você nasceu no ${nac}`
+        
+        if (nac != 'Brasil') {
+            res.innerHTML += `<strong>GRINGO</strong>!`
+        }
+        else{
+            res.innerHTML += `<strong>BRASILEIRO</strong>!`
+        }
+        res.innerHTML += `<p>Obrigado!</p>`
+       }
+    </script> 
+</body>
+</html>

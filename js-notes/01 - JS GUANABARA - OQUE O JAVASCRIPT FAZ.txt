@@ -1,0 +1,52 @@
+//CURSO EM VIDEO
+AULA 1 JAVASCRIPT - EM PARCERIA COM O GOOGLE
+
+UM EXEMPLO: EM UM JORNAL ENCONTRARIAMOS ESSES TRES PROFISSIONAIS.
+
+
+JORNALISTA - HTML - CONTEUDO
+DESIGNER -  CSS - DESIGN WEB
+PROGRAMADOR - JS - INTERAÇÕES
+
+ESSAS TRÊS TECNOLOGIAS FUNCIONAM EM CONJUNTO.
+
+Javascript diferente de HTML e CSS é sim uma Linguagem de Programação.
+Quem usa javascript? Google, Youtube, Linkedin, Netflix...
+
+Vamos desabilitar o JS do Google para ver oque acontece no devtools:
+
+O google fica igual o de antigamente, não vai me dar sugestões de pesquisa ao escrever.
+
+No google imagens não tem rolagem automatica, fica os numeros para listar.
+
+No youtube tambem, é tudo rolagem automatica. Sem Javascript nada funciona no youtube, nem a visualização carrega.
+
+Vamos abrir o Console do devtools e digitar:
+
+alert ('Ola Mundo!')
+
+Vai aparecer uma mensagem no topo da pagina dizendo oque escrevi.
+
+Para deixar o fundo da página preto:
+
+document.body.style.backgroud = 'black' 
+
+Inspecionando com o mouse ao passar em cima,
+ tem o nome dos "objetos" da pagina, vamos fazer assim com a logo deixando cinza:
+
+document.querySelector ('img#hplogo').style.filter = 'grayscale (100%)'
+
+Para desaparecer a logo:
+
+document.querySelector ('img#hplogo').style.visibility = 'hidden'
+
+Conseguimos alterar um texto no site do G1:
+
+document.querySelector ('span.bstn-hl-title').innerText = 'Curso em video de JS é o melhor do Youtube!'
+
+Mas essas alterações são so para nossa maquina, cliente. Ao dar F5 tudo volta ao normal.
+
+
+ 
+
+

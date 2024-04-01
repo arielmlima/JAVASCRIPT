@@ -1,0 +1,48 @@
+<!--usa a tag html:5 para criar esse tipo de arquivo -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <!-- CSS -->
+    <style>
+        body{
+            background-color: rgb(99, 99, 175);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1{
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo</h1>
+    <p>Já me livrei da maldição!</p>
+
+    <!-- SCRIPT: Geralmente fica antes do fechamento do body vamos invocar a string script, para que o script seja carregado depois do codigo base. -->
+
+    <!-- Disparar alertas, confirmações e perguntas no javascript: -->
+
+    <script>
+        //window. é opcional mas vamos deixar
+        //Alerta
+        window.alert('Minha primeira mensagem!')
+        //Aparece a mensagem com as opções Ok e Cancelar.
+        window.confirm('Esta gostando de JS?')
+        //Aparece a mensagem, e uma barra para digitar, e opções ok e cancelar.
+        window.prompt('Qual é seu nome?')
+    </script>
+</body>
+</html>
+
+<!-- Esses valores digitados não vamos ter acesso pois precisamos de uma variavel para armazenar, assunto da proxima aula. -->
+
+<!-- Os dados simplesmente foram pra lugar nenhum, se perderam, pois nós nao sabiamos guardar eles. Aprenderemos a guardar dados para usalos mais para frente. -->
+
+<!-- Tudo que se escreve na tela se coloca entre parenteses e aspas simples, antes se usava ponto e virgula no fechamento de cada comando hoje em dia não mais, é opicional -->
+
+<!-- Na hora de desenvolver um site, tem que se unir conteudo, estilo e interatividade  -->
+
+

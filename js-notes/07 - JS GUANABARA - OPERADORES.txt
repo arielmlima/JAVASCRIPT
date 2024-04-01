@@ -1,0 +1,109 @@
+CURSO JS - GUANABARA AULA 07
+OPERADORES: 
+
+-Aritméticos
+-Atribuição 
+-Relacionais
+-Lógicos
+-Ternário
+
+-Aritméticos: Operadores usados para fazer calculo.
+(+) (-) (*) (/) (%) (**)
+
+5+2= 7
+5-2= 3
+5*2= 10
+5/2= 2.5
+5%2= 1     //Resto da divisão inteira - oque sobra.
+5**2=      //Potencia: lemos 5 ao quadrado(2) ou 5*5 = 25 
+
+Exemplo (Cuidado):
+
+5 + 3 / 2 = Não vai dar 4.
+
+5 + 3 / 2 = 6.5 (Correta)
+
+//E se eu quiser fazer primeiro o 5 + 3 pra depois dividir por 2? Usamos parenteses na operação com prioridade, mudando a ordem de precedencia.
+(5 + 3) / 2 = 4
+
+//ORDEM DE PRECEDÊNCIA:
+
+//Primeiro priorizamos a seguinte ordem:
+()
+**
+* / % (Tem a mesma ordem de precedencia, se tiverem todos em uma expressão, faz a expressão normal da esquerda pra direita, quem aparecer primeiro).
++ - (e por fim as somas e subtrações).
+
+-Atribuição: 
+
+ Atribuição simples: 
+  
+>var a = 5 + 3   //leitura: variavel a RECEBE o valor de 5 + 3 
+ a = 8            //5+3 é 8, o 8 vai ficar guardado na minha variavel a
+
+ Se eu quero usar minha variavel a em algo mais na frente eu posso:
+
+>var b = a % 5  
+
+ b = 3 (resto de 8 dividido por 5)
+
+>var c = 5 * b ** 2
+c = 45 (Priorizamos a potenciação na precedencia)
+
+>var d = 10 - a / 2 
+d = 6 (Priorizamos a divisão na precedencia)
+
+>var e = 6 * 2 / d (Segue a ordem normal, todos tem a mesma precedencia)
+e= 2
+
+>var f = b % e + 4 / e ( + foi o ultimo a ser feito seguindo a ordem de precedencia)
+f= 3
+
+ Auto-atribuições: Atribuições a propria variavel.
+ var n = 3       // n vale 3 (Atribuição simples, a auto-atribuição vem abaixo)
+
+ n = n + 4       // n que valia 3 passa a valer 7 
+ n = n - 5       // n passa a valer 2
+ n = n * 4       // n passa a valer 8
+ n = n / 2       // n passa a valer 4
+ n = n ** 2      // n passa a valer 16
+ n = n % 5       // n passa a valer 1 
+
+
+ 
+ //Note que n começou com o valor 3, assumir varios valores e terminou valendo 1, isso são auto-atribuições.
+ //Com variaveis lembra da vaga de carro, temos que tirar o carro para botar outro.
+
+ E eu posso simplificar essas autoatribuições:    //So serve se a variavel receber ela mesma.
+ Reescrevemos assim na simplificação:          //A MAIORIA DAS LINGUAGENS ACEITAM ESSE TIPO DE SINTESE.
+
+ n = n + 4       //  n += 4
+ n = n - 5       //  n -= 5
+ n = n * 4       //  n *= 4
+ n = n / 2       //  n /= 2
+ n = n ** 2      //  n **= 2
+ n = n % 5       //  n %= 5
+
+
+Tambem temos os Operadores de Incremento que usaremos muito:
+
+ Sem operador de incremento:
+
+var x = 5    //variavel simples x recebe 5 logo x vale 5 
+x = x + 1    //x recebe ele mesmo + 1, e agora vale 6                   (Simplificando: x += 1)
+x = x - 1    //volta a valer 5                                          (Simplificando: x -= 1)
+
+ Com o operador de incremento escrevemos assim, uma simplificação ainda maior:
+
+var x = 5    //variavel simples x recebe 5 logo x vale 5 
+x ++    //x recebe ele mesmo + 1, e agora vale 6                   (Simplificando: x ++)
+x --   //volta a valer 5                                           (Simplificando: x --)
+
+Note que no node: Quando digitamos x ++ o resultado aparece sem alteração mas quando solicitamos a variavel x ele mostra oque foi adicionado.
+                   Se digitamos ++ x o resultado aparece assim que digito, porem isso tem suas diferenças explicaremos depois, usa a forma acima.
+
+-Relacionais
+-Lógicos
+-Ternário
+
+NOTA: O javascript so aponta erros sintaticos, então cuidado e atenção, quando algo não tiver funcionando geralmente como esperado não tem mensagemzinha.

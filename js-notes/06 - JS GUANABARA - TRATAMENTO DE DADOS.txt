@@ -1,0 +1,196 @@
+AULA 06 JS GUANABARA
+TRATAMENTO DE DADOS 
+
+EX VSCODE1:
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    
+    <style>
+        /*CSS*/
+        body{
+            background-color: rgb(99, 99, 175);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1{
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo</h1>
+    <p>Já me livrei da maldição!</p>
+    
+
+    <script>
+        //Vimos assim anteriormente: aparece a mensagem, e uma barra para digitar, e opções ok e cancelar, mas não armazena.
+        //window.prompt('Qual é seu nome?')
+
+        //Para armazenar:
+
+        //Variavel nome recebe o window.prompt que vai aparecer na janela
+        var nome = window.prompt('Qual é seu nome')//Declaramos como var, mas futuramente vamos aprender o let e o const.
+
+        window.alert('Prazer te-lo conosco, ' + nome + '!') //Concatenação (+) para unir uma coisa a outra, depois da aspas.
+    </script>
+</body>
+</html>
+
+
+<!-- Tudo que se escreve na tela se coloca entre parenteses e aspas simples, antes se usava ponto e virgula no fechamento de cada comando hoje em dia não mais, é opicional -->
+
+<!-- Na hora de desenvolver um site, tem que se unir conteudo, estilo e interatividade  -->
+
+<!-- Comentarios: -->
+<!-- Comentario CSS /* */ -->
+<!-- COMENTARIO HTML-->
+<!-- Comentario JS usa // -->
+
+-----------------------------------------------------------------------------------------------
+EX VSCODE 2:
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    
+    <style>
+        /*CSS*/
+        body{
+            background-color: rgb(99, 99, 175);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1{
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo</h1>
+    <p>Já me livrei da maldição!</p>
+    <!-- COMENTARIO HTML-->
+
+    <script>
+        
+        var n1  = Number.parseInt(window.prompt('Digite um número: '))//string
+        var n2 = parseInt(window.prompt('Digite outro numero: '))//string
+        var n3 = Number(window.prompt('Digite outro numero: '))//string
+        var s = n1 + n2 + n3
+
+        window.alert (`A soma dos numeros ${n1} + ${n2} + ${n3} é ${s}`)
+
+    //Note que na saida saiu 42 quando digitei 4 e 2 nas entradas, justamente por que o + esta agindo na ideia de concatenação.
+
+    //O window.prompt recebe valores em string temos que converter os dois de string para numero.
+
+    //(number + number) para adição
+    //(string + string) para concatenação
+
+    //Conversão string para numero.
+
+    //Usamos o Number.parseInt(n) ou apenas parseInt para numeros inteiros.
+    //Usamos o Number.parseFloat(n) ou apenas parseFloat para numeros reais.
+    //Agora atualmente no JS atual podemos usar apenas Number(n) e ele se vira, sabe oque estamos trabalhando, mas em alguns casos definimos efetivamente tratar como o metodo acima, definindo se é inteiro ou real logo. 
+
+  
+    //Conversão numero para string.
+    //String(n)
+    //n.toString(n)
+
+//Formatando string no node
+//var s = 'JavaScript' 
+//'Eu estou estudando s'    //não faz interpolação
+//'Eu estou estudando ' + s //usa concatenação
+//`Eu estou estudando ${s}` //usa template string
+
+//> nome = 'Gustavo'
+//'Gustavo'
+//> idade = 45
+//45
+//> nota = 5.5
+//5.5
+
+//> 'O aluno ' + nome + 'com ' + idade + ' anos tirou a nota ' + nota
+//'O aluno Gustavocom45 anos tirou a nota 5.5'
+
+//OU PODEMOS FAZER DA FORMA MAIS RECENTE COM CRASE, USA SO UMA NO INICIO OUTRA NO FIM E USA CIFRÃO COM COLCHETES, bem mais organizado:
+
+//`O aluno ${nome} com ${idade} anos tirou a nota ${nota}`
+
+//Tambem podemos saber qual o tamanho da string, quantos caracteres a string tem:
+//var s = 'JavaScript' 
+//s.length
+
+//Ou jogar ela pra letras maiusculas:
+//var s = 'JavaScript' 
+//s.toUpperCase()
+
+//Ou jogar ela pra letras minusculas:
+//var s = 'JavaScript' 
+//s.toLowerCase()
+
+
+        
+    </script>
+</body>
+</html>
+
+-------------------------------------------------------------
+
+EX03 VSCODE:
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var nome = window.prompt('Qual seu nome?')
+        document.write(`Olá <strong>${nome}!<strong> Seu nome tem ${nome.length} letras.<br/>`)
+        document.write(`Seu nome em maiusculas é ${nome.toUpperCase()}<br/>`) //Vai um parenteses pois é chamda por método
+        document.write(`Seu nome em minusculas é ${nome.toLowerCase()}`)
+
+        //Usamos tambem alguns comandos html dentro do JS.
+
+        //Agora vamos para a formatação de numeros no node.
+
+//> var n1 = 1545.5
+//> n1
+
+//1545.5
+
+//> n1.toFixed(2) //Se eu quisesse com duas casas decimais?
+//'1545.50'
+
+//> n1.toFixed(2).replace('.', ',')//Trocar ponto por virgula
+//'1545,50'
+
+//> n1.toLocalString('pt-BR', {style: 'currency', currency: 'BRL'}) 
+//> n1.toLocalString('pt-BR', {style: 'currency', currency: 'USD'})
+//> n1.toLocalString('pt-BR', {style: 'currency', currency: 'EUR'})  
+
+//Converte ja certin para moeda local de cada lugar, é um objeto coisa que veremos mais pra frente. ('local', 'estilo: vai ser currency que é dinheiro', 'e o currency vai ser brasil real'). Dessa forma não precisamos do replace.
+
+
+    </script>
+</body>
+</html>
+
+

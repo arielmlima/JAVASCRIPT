@@ -1,0 +1,181 @@
+AULA 08 - OPERADORES PARTE 2
+
+Ja falamos do aritmetico e de atribuição agora vamos falar dos outros.
+
+Relacionais, Lógicos e Ternário.
+
+Relacionais:
+
+>     //maior
+<     //menor
+>=    //maior ou igual
+<=    //menor ou igual
+==    //igualdade
+!=    //diferente
+
+Exercicio:
+
+//Note que toda expressao relacional o resultado vai ser representado em booleano.
+
+5>2        true        
+7<4        false
+8>=8       true
+9<=7       false
+5==5       true
+4!=4       false
+
+
+NODEJS:
+
+5>2
+true
+8<4 
+false
+
+
+var a = 8
+var b = 15
+
+a > b
+false
+
+a<b
+true
+
+a <= b - 10 //Nesse caso de operadores relacionais e aritmeticos, priorizamos por ordem o aritmetico.
+false
+
+a==b
+false
+
+a!=b
+true
+
+Exemplo:
+
+preço >= 200.50       //o preço é maior ou igual a 200.50?
+idade < 18            //a idade é menor do que 18?
+curso == 'JavaScript' //o curso é JavaScript?
+n1!=n2                //o primeiro numero é diferente do segundo numero?
+
+Existem tambem os operadores relacionais que chamamos de identidade: ===
+
+5  ==   5   true  
+5  ==  '5'  true     //O sinal de igualdade não testa o tipo, note que mesmo sendo uma string o JS reconhece como eles tendo a mesma grandeza/valor.
+5  === '5'  false    //Com === conferimos se tem o mesmo tipo e valor/grandeza. Esse é o operador de identidade e testa se eles são IDENTICOS.
+5  ===  5   true
+
+
+ Operadores Lógicos (Igual as portas lógicas)
+
+!     //negação
+&&    //conjunção ou nosso E/AND logico
+||    //disjunção ou nosso OU/OR logico
+
+
+Exemplo ! (NOT) - Apenas uma entrada.
+!true      //false
+!false     //true
+
+Uma coisa que não é verdadeira é falsa
+Uma coisa que não é falsa é verdadeira
+
+
+Exemplo && (AND) / Conjunção // Temos dois valores lógicos um de cada lado, só vai ser true se todos forem true.
+
+true && true  //true
+true && false //false
+false && true // false
+false && false //false
+
+Exemplo || (OR) /Disjunção // Temos dois valores lógicos um de cada lado, vai ser true se uma das entradas forem true.
+
+true && true  //true
+true && false //true
+false && true //true
+false && false //false
+
+Vamos para o NODEJS:
+
+var a = 5
+
+var b = 8
+
+true && false
+false
+
+true && true
+true
+
+true || false
+true
+
+false || false 
+false
+
+//Quando tem uma expressao com operadores relacionais, lógicos e aritmeticos como fazer? 
+
+a > b && b % 2 == 0 
+false && true 
+saida: false 
+
+//ORDEM A SER SEGUIDA: 
+ARITMETICOS (Ordem: 1: ()  2: **   3: * / %     4: + -)
+RELACIONAIS (Não tem ordem a ser seguida, esquerda pra direita)
+LOGICOS (Nos lógicos a ordem é NOT, AND E OR)
+
+
+a <= b || b / 2 == 2 
+true   ||  false
+saida: true
+
+
+//EXEMPLOS:
+
+idade >= 15 && idade <= 17                   //a idade está entre 15 e 17?
+estado == 'RJ' || estado == 'SP'             //o estado é RJ ou SP?
+salário > 1500 && sexo != 'Masculino'        //o salário é acima de 1500 e não é homem? 
+
+
+ Operador Ternário: Se chama ternario porque tem três partes. É tipo um verdadeiro ou falso, se for verdadeiro executa a primeira coisa, e o false executa a segunda coisa.
+
+?  : (Interrogação e dois pontos na mesma expressão)
+
+teste ? true : false
+
+No (?) vai indicar oque vai acontecer quando o teste lógico for verdadeiro.
+
+No (:) vai indicar oque vai acontecer quando for falso.
+
+Exemplo prático:
+
+var média = 5.5
+
+média >= 7.0 ? 'Aprovado' : 'Reprovado'
+Saida: Reprovado
+
+média += 3
+
+média 
+8.5
+
+média > 7?'APROVADO':'REPROVADO'
+APROVADO
+
+
+Exercicio 2:
+
+var x = 8
+
+var res = x%2 == 0 ? 5 : 9
+        //0   //true
+
+Saida: 5  
+
+Exercicio 3:
+
+var idade = 19
+
+var r = idade >= 18? 'MAIOR' : 'MENOR'
+r
+MAIOR  

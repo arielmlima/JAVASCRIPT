@@ -1,0 +1,202 @@
+AULA 05 JAVASCRIPT
+
+VARIAVEIS: NO JAVASCRIPT VAMOS PENSAR O SEGUINTE:
+
+TEMOS UM TERRENO QUE É UM ESTACIONAMENTO, SE NÃO HOUVER AS VAGAS DELIMITADAS NO CHÃO VIRA BAGUNÇA, NENHUM CARRO VAI CONSEGUIR SAIR OU ENTRAR.
+
+Para isso vamos organizar o terreno com marcações/espaços.
+
+Vagas para carro (a), vagas para caminhao (c), vagas para moto(m).
+
+No shopping oque facilita a identificação das vagas para localizar? Dar uma numeração.
+
+a1 | | c1  |  |  m1 ||    
+
+a2 | | c2  |  |  m2 ||
+
+a3 | | c3  |  |  m3 ||
+ 
+a4 | | c4  |  |  m4 ||
+
+a5 | |           m5 ||
+ 
+a6 | |           m6 ||
+
+*/
+vaga a1
+vaga a2
+vaga a3
+vaga a4
+vaga a5
+vaga a6
+/*
+A partir dai posso começar a botar os carros dentros de seus respectivos lugares, o tamanho dos automoveis vai variar.
+Vamos ocupar as variaveis, como fazer isso?
+
+vaga a1 = carro1
+
+//O igual (=) significa recebe no javascript, vamos combinar aqui que sempre que vermos vamos ler ele como recebe.
+//Ou seja:
+
+vaga a1 recebe carro
+
+Imagina agora que chega outro carro e quer estacionar nessa mesma vaga, existe alguma possibilidade fisica disso acontecer?
+Colocar dois carros na mesma vaga? Não! 
+Para colocar o segundo carro tenho que colocar o primeiro. E exatamente isso que acontece nos computadores, tenho que tirar oque ocupa o espaço antes para poder inserir um carro novo.
+
+Situação:
+
+vaga a1 = carro1  //Atribuiu um valor a variavel
+     a1 = carro 2 //Atribuiu um novo valor a variavel
+     a1 = null         //Não quero carro nenhum! Tirou o valor inserido na variavel
+
+
+Assim como acontecem nos estacionamentos, existem vagas de tamanhos diferentes, logo existem tambem variaveis de tamanhos diferentes.
+
+a1 | 5 |           s1  | JavaScript  |     
+
+a2 |8.5|           s2  |Curso emvideo|  
+
+a3 |15 |           s3  | Guanabara   |  
+
+
+var n1 = 5         var s1 = "JavaScript"
+var n2 = 8.5       var s2 = 'Curso emvideo'
+var n3 = 15        var s3 = `Guanabara`
+
+Nas strings declaramos com aspas simples, aspas duplas ou apostrofos, ou crases.
+
+Sobre os nomes das variaveis que chamamos de Identificadores, existem algumas regras:
+*Podem começar com letra, $ ou _
+*Não podem começar com números 
+*É possivel usar letras ou numeros
+*É possivel usar acentos e simbolos
+*Não podem conter espaços
+*Não podem ser palavras reservadas (Palavras que ja existem nos comandos).
+*Maiusculas e minusculas fazem total diferença
+*Tente usar nomes coerentes para as variaveis (nome, salario, peso, saldo)
+*Fuja da ideia de se tornar programador alfabeto ou contador (declarar as variaveis a,b,c,d,e,f ou n1,n2,n3,n4 para tudo)
+
+
+Entramos no node para dar uma olhada.
+
+E podemos acessar ele pelo vscode tambem, na aba terminal clica em novo terminal, e digita node
+que ele automaticamente ja vira o node
+
+Exercicio 1:
+
+//Para criar a variavel
+
+var idade = 18
+var salário = 1550.35
+var sexo = "M"
+
+//Para exibir
+
+idade
+
+salário
+
+sexo
+
+
+Exercicio 2:
+
+//Para criar a variavel
+
+var n1 = 8
+
+var n1 = 5
+
+//Para exibir
+n1
+
+n2
+
+n1+n2
+
+Exercicio 3:
+
+//Para criar a variavel
+
+var a = 10
+
+var A = 20
+
+//Para exibir
+a
+
+A
+
+
+As variaveis servem para guardar dados, varios tipos de dados, palavras, numeros, valores booleanos.
+
+Tipos de dados:
+
+O javascript não diferencia reais de inteiros/negativos, todos são do tipo: number
+Se for cadeias de caracteres/palavras, vem acompanhados de aspas, são do tipo: string
+E true e false são o tipo: boolean
+
+Mais tipos primitivos:
+
+Dentro do number encontramos dois valores internos muito importantes Infinity ou NaN.
+
+
+
+Temos o tipo object ja que o javascript é uma linguagem orientada a objeto.
+Dentro do object temos o Array (Vetor)
+
+Temos o function (Função)
+
+Veremos tambem o tipo null e undefined
+
+E para trabalhar com esses comandos todos, e saber qual tipo é temos um comandinho valioso que é: typeof
+
+No terminal NODEJS:
+
+var n = 200
+
+n
+
+typeof n
+
+n = 'Google'
+
+typeof n
+
+typeof 6 
+
+typeof 6.5
+
+typeof "5.3"
+
+typeof []
+
+typeof {}
+
+typeof function(){}
+
+typeof undefined
+
+typeof Nan
+
+typeof Infinity
+
+typeof null
+
+Vai me dizer oque é cada coisa na saida. 
+
+Control + L limpa a tela do node.
+Curiosidade: Um cpf por exemplo é tipo string pois é um conjunto de numeros, traços e pontos, não um valor numerico.
+
+
+
+
+
+
+
+
+
+
+
+

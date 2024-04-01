@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passo com DOM</title>
+    <style>
+        body{
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>   
+    <script>
+       window.document.write('Olá, mundo<br/>')//Adicionando por DOM um componente na tela, não é a mais bonita mas é mais simples
+       window.document.write(window.document.charset) //Mostrar set de caracteres (UTF-8)
+       window.document.write(window.navigator.appName)//Mostra que o googleChrome ta se comportando como um navegador NetScape
+       window.document.write(window.document.URL)//Exibir a URL
+
+//Selecionando por Marca
+
+      var corpo = window.document.body//Depois de declarar essa variavel, podemos trocar a cor do background por exemplo.
+
+      corpo.style.background = 'black'
+
+       var p1 = window.document.getElementsByTagName('p')[1]//Botamos entre parenses e aspas simples a tag que queremos selecionar. So que não vai pegar um elemento só, temos 2 p. Para selecionar o primeiro paragrafo, botamos [0], bara o próximo é [1].
+       window.document.write(p1.innerText)//innerText é o texto que tem dentro do primeiro paragrafo.
+
+       p1.style.color = 'blue'
+   
+//Selecionando usando ID
+       var d = window.document.getElementById('msg')
+
+       d.style.background = 'green'//Trocar cor de fundo
+
+       d.innerText = 'Estou aguardando...'//Trocar a palavra
+
+//Por Nome
+       var e = window.document.getElementsByName('msg')[0]
+       d.innerText = 'Olá!'
+
+//Por Seletor: Acesso pelo CSS, Vamos usar mais esse, tentar usar ele agora e deixar esses outros acima de lado.
+
+       //querySelector()
+       //querySelectorAll()
+
+       var f = window.document.querySelector('div#msg')
+       f.style.background = 'blue'
+
+
+       // # significa id no CSS
+       // . significa class no CSS
+
+       //Se fosse uma class:
+
+       //var f = window.document.querySelector('div.msg')
+       //f.style.background = 'blue'
+
+       //QuerySelector é oque há de mais novo nessa tecnologia, onde conseguimos por seletor alterar classes e ids.
+
+       //Viu que consigo ter acesso a varios componentes usando DOM dentro do meu JavaScript, recomendo agrupar as declarações das variaveis la em cima, aqui so estamos mostrando exemplos.
+
+    </script>
+
+    
+</body>
+</html>
+
+<!-- Oque é DOM? Acronimo para Document Object Model (Modelo de objetos para documentos), basicamente é um conjunto de objetos dentro do seu navegador, que vai dar o acesso aos componentes internos do seu website. Não funciona dentro do NODEJS, ele esta presente quando estou rodando JAVASCRIPT dentro do meu navegador, por isso acabamos de criar esse site.  -->
+
+<!-- Temos que saber fazer a nossa ARVORE DOM do nosso site, essa arvore começa pela raiz que dentro do navegador chamamos de window, então tudo dentro do Javascript esta dentro de um objeto chamado window (janela). 
+Então aquela janela do seu navegador é um objeto DOM e ele se chama window (em letras minusculas), dentro do window temos vários outros objetos, vamos ver três exemplos agora: location, document, history.
+
+//ARVORE DOM
+
+           window
+        /     |    \
+location            history
+          document
+             
+              |
+             html 
+            /    \
+        head      body 
+
+
+location: Qual a localização do seu site, qual a URL, qual a página atual, a anterior.
+
+document: É o documento atual.
+
+history: Vai guardando de onde você veio para onde você vai, facilitando a navegação dentro do seu site. 
+
+Existe tambem outro objeto muito importante: o html, simplesmente a parte html do meu site.
+
+E dentro de html eu tenho basicamente dois objetos, ou dois filhos (child) que é o head (cabeçalho) e o body (corpo).
+
+Note que se head e body é filho de html então eles são child, e html é o parent.
+
+Logo html é parent de head e body, mas é child de document.
+
+Dentro de head tem varias tags meta, title e outras coisas.
+
+Dentro do body do nosso site temos h1, p, p, div
+                                          |
+                                        strong
+
+
+//Na nossa arvore DOM podemos navegar de várias maneiras de navegar entre os elementos, da maneira que acharmos melhor.
+
+//SELECIONANDO
+//E para isso podemos SELECIONAR nossos elementos para poder navegar dentro da minha arvore DOM.
+
+Existem vários métodos para isso, são cinco métodos de acesso:
+
+por Marca  //tag
+por ID
+por Nome
+por Classe
+por Seletor //css
+
+
+por Marca  //tag
+getElementsByTagName() //Com isso conseguimos selecionar mais de um objeto, e existem mais de um objeto com a mesma tag por exemplo os dois <p> que tem no nosso código.
+
+    //No script no código acima mostramos como fazer.
+
+    //Selecionando por marca 
+
+       var p1 = window.document.getElementsByTagName('p')[0]
+       
+       //Botamos entre parenses e aspas simples a tag que queremos selecionar. So que não vai pegar um elemento só, temos 2 p. Para selecionar o primeiro paragrafo, botamos [0], bara o próximo é [1].
+
+       window.document.write(p1.innerText)
+       
+       //innerText é o texto que dentro do primeiro paragrafo. Pega o texto sem a formatação, sem as tags filhas.
+
+       //Em vez de innerText posso usar innerHTML que ele puxa com a formatação exata, negritos tudo mais. Pega o html inteiro inclusive com as tags filhas.
+
+por ID
+
+getElementByID()
+//Nesse caso não preciso ficar selecionando um por um, pois o ID ja é mais evoluido pelo id ser exclusivo.
+
+//Não precisa de [] pois é singular
+
+//Note que o proprio nome é Element e não Elements nesse caso.
+
+por Nome
+getElementsByName()
+//Posso usar o nome do objeto se eu tiver uma propriedade name.
+
+//Para trabalhar com mais de um elemento: Vai ser muito usado, e o por marca tambem, ambos vão precisar do [] para onde vão ser as alterações.
+
+por Classe
+getElementsByClassName()
+
+

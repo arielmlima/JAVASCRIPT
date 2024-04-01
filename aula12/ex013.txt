@@ -1,0 +1,235 @@
+
+        //Como vimos: 
+        //Temos as condições simples:
+        //if (condição){ //true }
+
+        //E as compostas:
+        //if (condição){//true}
+        //else{//false}
+
+        //Mas tambem vimos que nem tudo são flores, e em muitos casos vamos ver que temos várias condições, e não so uma ou duas. E ai podemos juntar uma coisa na outra:
+
+        //Nesse caso, pegamos uma condição composta, e na parte do true (if) continua a mesma coisa, ja na parte do else colamos outra condição ⧫, que vai ter duas possibilidades. No exemplos abaixo vamos aninhar so mais uma vez, mas podemos fazer isso VÁRIAS E VÁRIAS VEZES.
+
+        //Condições aninhadas: 
+        //    ____ ⧫ _____________
+        //   ↓                    ↓
+        //  bloco             ____⧫____
+        //   if              ↓  else   ↓
+        //   ↓              true      false
+        //   '               '----o----'
+        //   '                    '     
+        //   '                    '
+        //   '                    '
+        //   '                    '
+        //   ----->o<--------------
+        //         ↓
+        //Quando temos uma condição aninhada, temos exatamente uma condição dentro da outra. 
+
+        if(cond1){
+            bloco1
+        }else{
+            if(cond2){
+               bloco2
+            }else{
+                bloco3
+            }
+        }
+
+        //Note que se no if for true, vai executar somente o bloco 1, não vai executar o else.
+
+        //Se o if for false vai executar o else, que ja chama em uma nova condição, que sendo verdadeira executa o bloco2.
+
+        //Se o if for false vai executar o else, que ja chama em uma nova condição, que sendo falsa executa o bloco3.
+
+        //Exemplo: 
+        
+        //Vou sair de casa se o tempo estiver bom! Esta bom o tempo? Sim! Vou sair.
+
+        //O tempo esta bom? Não! Se(if) mais tarde estiver bom a gente sai.
+        
+        //O tempo esta bom? Não! E entrou em outro (if) false. Senão (else) não estando bom mais tarde, vamos fazer pipoca e assistir filme.
+
+
+        ex0013.js 
+
+        //Novamente estamos dentro do node.js e usaremos console.log em vez de document.write pois não estamos dentro do navegador, e essas são propriedades DOM.
+
+//Exemplo
+
+//var idade = 22
+//if (idade < 18){
+//   console.log('Menor de idade')
+//}else{
+//    console.log('Maior de idade')
+//}
+
+//Exemplo
+
+//var idade = 16
+//if (idade < 18){
+//    console.log('Não vota')
+//}else{
+//    ('Vota')
+//}
+
+//Nesse caso de votar com 16 anos, você pode votar sim logo nossa lógica estaria errada na saida, mesmo no código estando tudo certo.
+
+//var idade = 16
+//if (idade < 16){
+//    console.log('Vota, ja pode votar!')
+//}else { 
+//    if(idade < 18 ) {
+//        console.log('Voto obrigatório')
+// }
+//}
+
+//Podemos escrever assim tambem simplificando mais com o: else if, tiramos o else e trocamos por else if ja com as condições.
+
+//Exemplo1: com um else if
+
+var idade = 16
+if (idade < 16){
+    console.log('Não vota!')
+}    
+    else if(idade < 18){
+        console.log('Voto opcional') 
+    } 
+    else {
+        console.log('Voto obrigatório')
+    }
+    
+//Exemplo2: Com dois else if
+    var idade = 16
+    if (idade < 16){
+        console.log('Voto opcional!')
+    }    
+        else if(idade < 18 ) {
+            console.log('Voto obrigatório') 
+        } 
+        else if(idade >= 70) {
+            console.log('Voto não obrigatório')
+        }
+
+        
+//Exercicio: 
+
+var agora =  new Date() //Como fazer para pegar a hora atual, declaramos a variavel agora e puxamos o new Date.
+var hora = agora.getHours() //nossa variavel agora recebe agora. getHours(), que vai pegar a hora do sistema que ta rodando, para a gente e guardar na nossa variavel. Tem para ano, segundo, minuto, mês... 
+
+console.log(`Agora são exatamente ${hora} horas.`)
+if (hora < 12 && hora >= 5) {
+    console.log('BOM DIA')
+}else if(hora >= 12 && hora < 18) {
+    console.log('BOA TARDE')
+}
+else if(hora >= 18 && hora < 24  ) {
+    console.log('BOA NOITE')
+}
+else if(hora >= 0 || hora < 4) {
+    console.log('BOA MADRUGADA')
+}
+
+
+//Condição Múltipla: Alem das condições aninhadas temos as condições multiplas. Onde vamos trabalhar com valores FIXOS. Muito util para situações pontuais, e especificas. 
+
+//          ↓
+//      ____⧫____
+//      /  / \  \
+//     /  /   \  \
+//    /           \
+//   bl  bl   bl  bl
+//    \   \   /   /
+//      \  \ /   /
+//          o
+//          ↓
+
+//Legenda: bl é o bloco.
+
+switch(expressão){
+  case valor1:
+
+  break
+  case valor2:
+
+  break
+  case valor3:
+
+  break
+  default: 
+  
+  break
+}
+//Para cada expressão vamos colocar um case (caso), se a expressão for o primeiro valor, executa o primeiro bloco, se for o segundo executa o segundo, se for o terceiro executa o terceiro, se for nenhum deles, executa o default:
+
+//o default é como se fosse um else no switch, se não fizer nenhum caso anterior, cai no default. 
+
+//Para cada um dos cases temos um bloco. E por fim temos o default opcional DENTRO do ultimo bloco, que é o padrão, se nenhum dos de cima obedecer.
+
+//Importante: Obrigatório: para cada case temos que colocar um comando break no final, so no ultimo que é opcional, mas vamos colocar sempre!
+
+//Ele continua executando os comandos até achar um break, tem que ter! Sem eles teremos problemas.
+  
+//New JS
+
+
+var agora = new Date()
+var diaSem = agora.getDay()
+
+//diaSem = 4
+
+/* 
+0 Domingo
+1 Segunda 
+2 Terça 
+3 Quarta
+4 Quinta 
+5 Sexta
+6 Sabado
+*/
+
+//console.log(diaSem)
+
+//A saida vai ser 5 pois hoje é sexta feira.
+
+//Fica meio dificil de entender usando numero, vamos passar isso para um switch, para facilitar nossa vida.
+
+switch (diaSem) {
+    case 0:
+    console.log('Hoje é DOMINGO')  
+    break 
+
+    case 1:
+    console.log('Hoje é SEGUNDA') 
+    break  
+
+    case 2:
+    console.log('Hoje é TERÇA') 
+    break  
+
+    case 3:
+    console.log('Hoje é QUARTA') 
+    break  
+
+    case 4:
+    console.log('Hoje é QUINTA') 
+    break  
+
+    case 5:
+    console.log('Hoje é SEXTA') 
+    break  
+
+    case 6:
+    console.log('Hoje é SABADO') 
+    break 
+
+    default: //Se não for um dia de 0 a 6, note que o default é dentro do ultimo case, e não fora.
+    console.log('[ERRO] Dia invalido')
+    break
+}
+
+//MUITO UTIL NESSAS SITUAÇÕES MAIS PONTUAIS.
+
+
+
+

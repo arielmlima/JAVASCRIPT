@@ -1,0 +1,177 @@
+AULA 10 CURSO JS - EVENTOS DOM 
+
+//Eventos DOM
+   
+    //Eventos é tudo aquilo que pode acontecer com qualquer elemento, no nosso exemplo no caso uma div. E oque pode acontecer com essa div? DIVERSAS COISAS. 
+
+    //mouseenter: Os mais comuns são eventos de mouse(mouseenter), onde quando o cursor do mouse entra/encosta na div ele dispara algo, geralmente a cor muda, causando interação: 
+
+    //mouseenter
+
+    //mousemove: Outra coisa que posso fazer é continuar movendo o mouse dentro da div nesse momento vai ser disparado o:
+
+    //mousemove
+
+
+    //mousedown: Se eu pegar o mouse clicar e segurar eu tenho o:
+
+    //mousedown
+
+    //mouseup: No momento que eu soltar o botão do mouse.
+
+    //mouseup
+
+    //click: Evento do click inteiro. 
+
+    //click
+
+    //mouseout: No momento que eu tirar o cursor dentro da div ele dispara.
+
+    //mouseout
+
+     //Procurar Event Reference da Mozilla (JavaScript DOM reference List), tem muitos eventos!
+
+
+     //Antes de entrarmos mais a fundo em eventos e como disparalos e tratalos, vamos entender as funções:
+
+
+
+
+     //FUNÇÕES ou funcionalidade: É um conjunto de códigos, que so vai acontecer quando determinado evento ocorrer. 
+
+     //Por exemplo vou programar 10 linhas/códigos, essas 10 linhas chamamos de bloco. Essas 10 linhas formam o nosso bloco.
+
+     //E essas 10 linhas não vão ser mais executadas automaticamente, como estavamos fazendo, agora por exemplo: elas dependem de eu clicar na div bloco para isso acontecer.
+
+     //Essas 10 linhas só vão ser disparadas quando o evento ocorrer.
+
+     //Primeiro passo é colocar seu código dentro de um bloco, um bloco no javascript é delimitado por chaves {bloco}. Esse bloco temos que nomear ele como uma function:
+
+     //function{bloco}
+
+     //function{}  
+     
+     //Isso seria uma função anonima, uma função que não tem nome.
+
+     //E para que o método possa funcionar temos que dar um nome para essa função 
+
+     //E geralmente as funções vão ter nomes de ações, nomes de evento. Vai ter o nome da ação que vai acontecer e abre e fecha parenteses.
+
+     //funcition ação(){}
+
+    //E dentro desses parenteses podemos colocar vários parametros (), coisa que veremos mais para frente.
+     
+    //funcition ação(param){}
+
+---------------------------------------------------------------------------------------------------------------
+
+
+Vscode2:
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--Tiramos os eventos configurados aqui e configuramos pelo proprio javascript, na parte do script.-->
+   <div id="area">
+    Interaja...
+   </div>
+
+<script>
+
+//Configurando eventos pelo Javascript: se chama listeners (ouvidores) que estão prestando atenção dentro do proprio javascript:
+
+var a = window.document.getElementById('area') 
+
+//Aqui é onde configuramos, e tiramos do HTML, deixamos o código mais limpo.
+a.addEventListener('click', clicar)
+a.addEventListener('mouseenter', entrar)
+a.addEventListener('mouseout', sair)
+
+    function clicar() {
+        a.innerText = 'Clicou!'
+        a.style.background = 'red'
+    }
+
+    function entrar() {
+        a.innerText = 'Entrou!'
+    }
+
+    function sair() {
+        a.innerText = 'Saiu!'
+        a.style.background = 'green'
+    }
+  //Curiosidade: Como eu sei que tem erro se aqui não aponta? Vamos para o devtools, no f12 e la ele vai apontar no Console a linha. Geralmente a linha vai ta dessa linha para cima. Por um W maiusculo no window o código não funciona.
+</script>
+</body>
+</html>
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+Vscode 3:
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somador</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+
+        }
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        function somar() {
+         var tn1 = window.document.getElementById('txtn1')
+
+         var tn2 = window.document.querySelector('input#txtn2') //Com queryselector funciona legal tambem
+
+         var res = window.document.getElementById('res')
+         
+         //Tratamento de dados, para não concatenar, temos que converter em numero como vimos antes.
+         var n1 = Number(tn1.value)
+         var n2 = Number(tn2.value) 
+
+         var s = n1 + n2
+
+         res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>` 
+        
+
+        }
+    </script>
+
+    <!-- Dica: se você digitar div#area e apertar tab ele cria automático <div id="area"></div>. Isso funciona tbm para classes e para tags personalizadas! -->
+</body>
+</html>

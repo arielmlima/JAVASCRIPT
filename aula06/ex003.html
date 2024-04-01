@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    
+    <style>
+        /*CSS*/
+        body{
+            background-color: rgb(99, 99, 175);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1{
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo</h1>
+    <p>Já me livrei da maldição!</p>
+    <!-- COMENTARIO HTML-->
+
+    <script>
+        
+        var n1  = Number.parseInt(window.prompt('Digite um número: '))//string
+        var n2 = parseInt(window.prompt('Digite outro numero: '))//string
+        var n3 = Number(window.prompt('Digite outro numero: '))//string
+        var s = n1 + n2 + n3
+
+        window.alert (`A soma dos numeros ${n1} + ${n2} + ${n3} é ${s}`)
+
+    //Note que na saida saiu 42 quando digitei 4 e 2 nas entradas, justamente por que o + esta agindo na ideia de concatenação.
+
+    //O window.prompt recebe valores em string temos que converter os dois de string para numero.
+
+    //(number + number) para adição
+    //(string + string) para concatenação
+
+    //Conversão string para numero.
+
+    //Usamos o Number.parseInt(n) ou apenas parseInt para numeros inteiros.
+    //Usamos o Number.parseFloat(n) ou apenas parseFloat para numeros reais.
+    //Agora atualmente no JS atual podemos usar apenas Number(n) e ele se vira, sabe oque estamos trabalhando, mas em alguns casos definimos efetivamente tratar como o metodo acima, definindo se é inteiro ou real logo. 
+
+  
+    //Conversão numero para string.
+    //String(n)
+    //n.toString(n)
+
+//Formatando string no node
+//var s = 'JavaScript' 
+//'Eu estou estudando s'    //não faz interpolação
+//'Eu estou estudando ' + s //usa concatenação
+//`Eu estou estudando ${s}` //usa template string
+
+//> nome = 'Gustavo'
+//'Gustavo'
+//> idade = 45
+//45
+//> nota = 5.5
+//5.5
+
+//> 'O aluno ' + nome + 'com ' + idade + ' anos tirou a nota ' + nota
+//'O aluno Gustavocom45 anos tirou a nota 5.5'
+
+//OU PODEMOS FAZER DA FORMA MAIS RECENTE COM CRASE, USA SO UMA NO INICIO OUTRA NO FIM E USA CIFRÃO COM COLCHETES, bem mais organizado:
+
+//`O aluno ${nome} com ${idade} anos tirou a nota ${nota}`
+
+//Tambem podemos saber qual o tamanho da string, quantos caracteres a string tem:
+//var s = 'JavaScript' 
+//s.length
+
+//Ou jogar ela pra letras maiusculas:
+//var s = 'JavaScript' 
+//s.toUpperCase()
+
+//Ou jogar ela pra letras minusculas:
+//var s = 'JavaScript' 
+//s.toLowerCase()
+
+
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
