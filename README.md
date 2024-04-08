@@ -12,6 +12,8 @@
 <a href="https://arielmlima.github.io/JAVASCRIPT/aula11/ex011.html">Exercicio 009</a>
 <a href="https://arielmlima.github.io/JAVASCRIPT/aula11/ex012.html">Exercicio 010</a>
 <a href="https://arielmlima.github.io/JAVASCRIPT/aula12/ex013.txt">Exercicio 011</a>
+<a href="https://arielmlima.github.io/JAVASCRIPT/aula13/ex016.txt">Exercicio 012</a>
+<a href="https://arielmlima.github.io/JAVASCRIPT/aula13/ex017.txt">Exercicio 013</a>
 <br><br>
 <a href="https://arielmlima.github.io/JAVASCRIPT/exercicios/exe001/modelo.html">Desafio 001</a>
 <a href="https://arielmlima.github.io/JAVASCRIPT/exercicios/exe002/main.html">Desafio 002</a>
